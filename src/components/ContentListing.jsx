@@ -47,10 +47,12 @@ const ContentListing = () => {
         <div className="content-listing">
             <header className="header">
                 <button className="icon-button" onClick={() => {
-                    window.history.back();
+
                     if (searchMode) {
                         setSearchMode(false);
                         setSearchQuery("");
+                    } else {
+                        window.history.back();
                     }
                 }}>
                     <img src={`${BASE_API_URL}/images/Back.png`} alt="Back" />
